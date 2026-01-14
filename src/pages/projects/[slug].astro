@@ -1,0 +1,267 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getAllProjects, getProjectBySlug } from "../../lib/projects";
+
+// Tell Astro which project pages to build
+export function getStaticPaths() {
+  const projects = getAllProjects();
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const project = getProjectBySlug(slug);
+
+if (!project) {
+  throw new Error(`Project not found: ${slug}`);
+}
+
+// Helper: build a YouTube embed URL from various possible URL formats
+function getYouTubeEmbed(url) {
+  if (!url) return null;
+
+  // watch?v=ID
+  if (url.includes("watch?v=")) {
+    return url.replace("watch?v=", "embed/");
+  }
+
+  // youtu.be/ID
+  if (url.includes("youtu.be/")) {
+    const id = url.split("youtu.be/")[1].split(/[?&]/)[0];
+    return `https://www.youtube.com/embed/${id}`;
+  }
+
+  return null;
+}
+
+// Collect up to two videos:
+// - Prefer trailer + gameplay if present
+// - Fall back to single "video" field if that's all we have
+const links = project.links ?? {};
+const videoEntriesRaw = [];
+
+if (links.trailer) {
+  videoEntriesRaw.push({ label: "Trailer", url: links.trailer });
+}
+if (links.gameplay) {
+  videoEntriesRaw.push({ label: "Gameplay", url: links.gameplay });
+}
+if (videoEntriesRaw.length === 0 && links.video) {
+  videoEntriesRaw.push({ label: "Gameplay", url: links.video });
+}
+
+const videos = videoEntriesRaw
+  .map((v) => {
+    const embed = getYouTubeEmbed(v.url);
+    return embed ? { ...v, embedUrl: embed } : null;
+  })
+  .filter(Boolean);
+
+const primaryVideo = videos[0] ?? null;
+const extraVideos = videos.slice(1);
+
+const { Content } = project;
+---
+<Base title={`${project.title} — Dor Shem Tov`} description={project.summary}>
+  <a href="/projects" class="text-xs text-neutral-300 hover:text-accent underline">
+    ← Back to projects
+  </a>
+
+  <section class="mt-3 grid gap-8 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1.1fr)] items-start">
+    <!-- Media column -->
+    <div class="space-y-4">
+      <!-- Primary video or cover -->
+      <div class="aspect-video w-full overflow-hidden rounded-2xl border border-white/10 bg-black/70">
+        {primaryVideo ? (
+          <iframe
+            class="h-full w-full"
+            src={primaryVideo.embedUrl}
+            title={primaryVideo.label}
+            allow="fullscreen; picture-in-picture"
+          ></iframe>
+        ) : (
+          <img
+            src={project.cover}
+            alt={project.title}
+            class="h-full w-full object-cover"
+            loading="lazy"
+          />
+        )}
+      </div>
+
+      <!-- Extra videos (e.g. Manos gameplay) -->
+      {extraVideos.length > 0 && (
+        <div class="grid gap-4 md:grid-cols-2">
+          {extraVideos.map((v) => (
+            <div class="space-y-1">
+              <div class="aspect-video w-full overflow-hidden rounded-xl border border-white/10 bg-black/70">
+                <iframe
+                  class="h-full w-full"
+                  src={v.embedUrl}
+                  title={v.label}
+                  allow="fullscreen; picture-in-picture"
+                ></iframe>
+              </div>
+              <p class="text-[11px] text-neutral-300">{v.label}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <!-- Screenshot gallery with click-to-zoom -->
+      {project.gallery && project.gallery.length > 0 && (
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+          {project.gallery.map((img) => (
+            <button
+              type="button"
+              class="group relative h-32 w-full overflow-hidden rounded-xl border border-white/10"
+              data-lightbox-src={img}
+            >
+              <img
+                src={img}
+                alt=""
+                class="h-full w-full object-cover"
+                loading="lazy"
+              />
+              <div class="pointer-events-none absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center text-[11px] text-neutral-100 transition">
+                Click to enlarge
+              </div>
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+
+    <!-- Info column -->
+    <aside class="card space-y-3">
+      <h1 class="text-xl sm:text-2xl font-semibold">{project.title}</h1>
+      <p class="text-xs text-neutral-300">{project.summary}</p>
+
+      <div class="flex flex-wrap gap-2 text-[11px]">
+        {project.tags?.map((t) => <span class="tag">{t}</span>)}
+      </div>
+
+      <dl class="grid grid-cols-[auto,1fr] gap-x-3 gap-y-1 text-[11px] text-neutral-300">
+        {project.role && (
+          <>
+            <dt class="font-semibold text-neutral-200">Role</dt>
+            <dd>{project.role}</dd>
+          </>
+        )}
+        {project.tech && (
+          <>
+            <dt class="font-semibold text-neutral-200">Tech</dt>
+            <dd>{project.tech}</dd>
+          </>
+        )}
+      </dl>
+
+      <div class="flex flex-wrap gap-2 pt-2">
+        {links.appstore && (
+          <a class="btn btn-sm" href={links.appstore} target="_blank">
+            App Store
+          </a>
+        )}
+        {links.playstore && (
+          <a class="btn btn-sm" href={links.playstore} target="_blank">
+            Google Play
+          </a>
+        )}
+        {links.download && (
+          <a class="btn btn-sm" href={links.download} target="_blank">
+            Download build
+          </a>
+        )}
+        {links.video && !links.trailer && !links.gameplay && (
+          <a
+            class="btn btn-sm bg-white/5 text-neutral-100 hover:bg-white/10"
+            href={links.video}
+            target="_blank"
+          >
+            Open on YouTube
+          </a>
+        )}
+      </div>
+    </aside>
+  </section>
+
+  <section class="mt-8">
+    <article class="prose prose-invert max-w-none">
+      <Content />
+    </article>
+  </section>
+
+  <!-- Lightbox overlay -->
+  <div
+    id="lightbox"
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80"
+  >
+    <button
+      id="lightbox-close"
+      class="absolute right-4 top-4 rounded-full bg-white/10 px-3 py-1 text-xs text-neutral-100 hover:bg-white/20"
+      type="button"
+    >
+      ✕ Close
+    </button>
+    <img
+      id="lightbox-img"
+      src=""
+      alt=""
+      class="max-h-[90vh] max-w-[90vw] rounded-xl border border-white/20 object-contain shadow-xl"
+    />
+  </div>
+
+  <script>
+    if (typeof window !== "undefined") {
+      const lb = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lightbox-img");
+      const lbClose = document.getElementById("lightbox-close");
+
+      function showLightbox(src) {
+        if (!lb || !lbImg) return;
+        lbImg.src = src;
+        lb.classList.remove("hidden");
+        lb.classList.add("flex");
+      }
+
+      function hideLightbox() {
+        if (!lb || !lbImg) return;
+        lb.classList.add("hidden");
+        lb.classList.remove("flex");
+        lbImg.src = "";
+      }
+
+      document.querySelectorAll("[data-lightbox-src]").forEach((el) => {
+        el.addEventListener("click", () => {
+          const src = el.getAttribute("data-lightbox-src");
+          if (src) showLightbox(src);
+        });
+      });
+
+      lb?.addEventListener("click", (e) => {
+        if (e.target === lb) hideLightbox();
+      });
+
+      lbClose?.addEventListener("click", hideLightbox);
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") hideLightbox();
+      });
+    }
+  </script>
+
+
+
+{project.links?.video && (
+  <div class="mt-10 aspect-video rounded-xl overflow-hidden border border-white/10">
+    <iframe
+      src={project.links.video}
+      class="w-full h-full"
+      loading="lazy"
+      allowfullscreen
+    />
+  </div>
+)}
+
+</Base>
