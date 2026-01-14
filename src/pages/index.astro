@@ -10,7 +10,11 @@ const featured = projects
 ---
 
 <Base title="Dor Shem Tov — Unity Game Developer">
+
+  <!-- HERO SECTION -->
   <section class="grid gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] items-center">
+
+    <!-- LEFT SIDE TEXT -->
     <div class="space-y-4">
       <p class="text-sm font-mono text-accent">Game Design • Systems • Prototyping</p>
 
@@ -30,35 +34,27 @@ const featured = projects
       </div>
     </div>
 
-    <!-- RIGHT SIDE FEATURED CARDS OR IMAGE -->
-    <div class="grid gap-4">
-      {featured.map((project) => (
-        <a
-          href={`/projects/${project.slug}`}
-          class="card hover:scale-[1.02] transition-transform"
-        >
-          <div class="flex items-center gap-4">
-            <img
-              src={project.data.cover}
-              alt={project.data.title}
-              class="h-16 w-16 rounded-lg object-cover"
-            />
-            <div>
-              <h3 class="font-semibold">{project.data.title}</h3>
-              <p class="text-xs opacity-70">{project.data.summary}</p>
-            </div>
-          </div>
-        </a>
-      ))}
+    <!-- RIGHT SIDE PLACEHOLDER IMAGE -->
+    <div class="w-full h-full flex items-center justify-center">
+      <img
+        src="/images/placeholder.webp"
+        alt="Placeholder"
+        class="rounded-xl shadow-lg object-cover w-full h-[300px]"
+      />
     </div>
+
   </section>
 
+  <!-- FEATURED PROJECTS SECTION -->
   <section class="mt-20">
     <h2 class="section-title">Featured Projects</h2>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
       {featured.map((project) => (
-        <a href={`/projects/${project.slug}`} class="card hover:scale-[1.02] transition-transform">
+        <a
+          href={`/projects/${project.slug}`}
+          class="card hover:scale-[1.02] transition-transform"
+        >
           <img
             src={project.data.cover}
             alt={project.data.title}
@@ -72,4 +68,5 @@ const featured = projects
       ))}
     </div>
   </section>
+
 </Base>
