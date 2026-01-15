@@ -2,17 +2,32 @@
 import "../styles/global.css";
 
 const {
-  title = "Dor Shem Tov — Unity Game Developer",
-  description = "Portfolio of Unity & C# games and tools by Dor Shem Tov.",
+  title = "Dor Shem Tov — Game Designer & Product Manager",
+  description = "Portfolio of games, prototypes, and tools by Dor Shem Tov — Game Designer & Product Manager.",
 } = Astro.props;
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <meta name="description" content={description} />
+
+    <!-- Tab Title -->
     <title>{title}</title>
+
+    <!-- Application naming for Chrome/Edge/PWA -->
+    <meta name="application-name" content="Dor Shem Tov Portfolio" />
+
+    <!-- Social Metadata -->
+    <meta property="og:site_name" content="Dor Shem Tov Portfolio" />
+    <meta property="og:title" content={title} />
+    <meta property="twitter:title" content={title} />
+
+    <!-- Favicon -->
     <link rel="icon" href="/favicon.svg" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,9 +35,12 @@ const {
       rel="stylesheet"
     />
   </head>
-  <body class="min-h-screen bg-gradient-to-b from-neutral-950 via-neutral-950 to-neutral-900 text-neutral-100">
+
+  <body class="min-h-screen bg-neutral-950 text-neutral-100">
     <header class="border-b border-white/5 bg-black/30 backdrop-blur">
       <nav class="container flex h-16 items-center justify-between">
+
+        <!-- LOGO / TOP LEFT -->
         <a href="/" class="flex items-center gap-2">
           <div class="h-8 w-8 rounded-xl bg-accent/90 flex items-center justify-center text-xs font-extrabold text-black">
             DST
@@ -31,6 +49,8 @@ const {
             Dor Shem Tov
           </span>
         </a>
+
+        <!-- NAV LINKS -->
         <div class="flex items-center gap-4 text-xs sm:text-sm">
           <a class="nav-link" href="/projects">Projects</a>
           <a class="nav-link" href="/about">About</a>
@@ -40,10 +60,12 @@ const {
       </nav>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main class="container py-10">
       <slot />
     </main>
 
+    <!-- FOOTER -->
     <footer class="border-t border-white/5 py-8 text-xs text-neutral-400">
       <div class="container flex flex-wrap items-center justify-between gap-3">
         <span>© {new Date().getFullYear()} Dor Shem Tov</span>
