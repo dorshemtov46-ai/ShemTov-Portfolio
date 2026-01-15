@@ -5,29 +5,29 @@ import { getAllProjects } from "../lib/projects";
 // Load all projects
 const allProjects = getAllProjects();
 
-// Your desired manual order
-const ORDER: string[] = [
-  "Warriors Merge",
-  "Ice Slingers",
-  "Orbit Defense!",
-  "Castle Force TD",
-  "Peg Slinger",
-  "Super Strike!",
-  "Chaos Squad",
-  "Slime Hunt",
-  "Survive the Void",
-  "Mr.Gish",
-  "Devoured",
-  "A Way Back",
-  "Iris",
-  "Vertical Slice",
-  "Bound Survivors",
+// Desired manual order by SLUG (not title)
+const ORDER_SLUGS: string[] = [
+  "warriors-merge",
+  "ice-slingers",
+  "orbit-defense",
+  "castle-force-td",
+  "peg-slinger",
+  "super-strike",
+  "chaos-squad",
+  "slime-hunt",
+  "survive-the-void",
+  "mr-gish",
+  "devoured",
+  "a-way-back",
+  "iris",
+  "vertical-slice",
+  "bound-survivors",
 ];
 
 // Sorting logic to follow your list exactly
 const projectsOrdered = [...allProjects].sort((a, b) => {
-  const ia = ORDER.indexOf(a.title);
-  const ib = ORDER.indexOf(b.title);
+  const ia = ORDER_SLUGS.indexOf(a.slug);
+  const ib = ORDER_SLUGS.indexOf(b.slug);
 
   const aIn = ia !== -1;
   const bIn = ib !== -1;
@@ -41,7 +41,7 @@ const projectsOrdered = [...allProjects].sort((a, b) => {
   // If only B is in the list → B comes first
   if (!aIn && bIn) return 1;
 
-  // If neither is in the list → fallback alphabetical
+  // If neither is in the list → fallback alphabetical by title
   return a.title.localeCompare(b.title);
 });
 ---
@@ -52,8 +52,8 @@ const projectsOrdered = [...allProjects].sort((a, b) => {
     <header class="space-y-2">
       <h1 class="text-3xl sm:text-4xl font-bold">All Projects</h1>
       <p class="text-sm sm:text-base text-neutral-300 max-w-2xl">
-        A collection of prototypes, production games, and design experiments.  
-        Ordered manually to highlight key projects first.
+        A collection of prototypes, production games, and design experiments,
+        ordered manually to highlight key projects first.
       </p>
     </header>
 
