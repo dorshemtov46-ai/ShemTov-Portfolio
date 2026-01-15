@@ -9,17 +9,17 @@ const allProjects = getAllProjects();
 const featuredProjects = allProjects.slice(0, 6);
 ---
 
-<Base title="Dor Shem Tov — Game Designer & Unity Developer">
+<Base title="Dor Shem Tov — Game Designer & Product Manager">
+
   {/* HERO SECTION */}
   <section class="grid gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] items-center">
     <div class="space-y-4">
-      {/* removed yellow tagline */}
 
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
         Dor Shem Tov
-        <span class="block text-lg sm:text-xl font-normal text-neutral-300 mt-2 flex items-center gap-2">
+        <span class="block text-lg sm:text-xl font-normal mt-2 flex items-center gap-2 text-accent">
           Game Designer
-          <span class="inline-block w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
+          <span class="inline-block w-1.5 h-1.5 rounded-full bg-accent"></span>
           Product Manager
         </span>
       </h1>
@@ -39,8 +39,8 @@ const featuredProjects = allProjects.slice(0, 6);
 
     <div class="card p-0 overflow-hidden">
       <img
-        src="/images/hero-placeholder.svg"
-        alt="Dor Shem Tov portfolio hero placeholder"
+        src="/images/dst-profile.jpg"
+        alt="Dor Shem Tov"
         class="w-full h-full object-cover rounded-xl"
         loading="lazy"
       />
@@ -85,4 +85,5 @@ const featuredProjects = allProjects.slice(0, 6);
       </div>
     )}
   </section>
+
 </Base>
