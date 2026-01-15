@@ -2,52 +2,89 @@
 import Base from "../layouts/Base.astro";
 import { getAllProjects } from "../lib/projects";
 
-// Load all project content
-const all = getAllProjects();
+// Load all projects
+const allProjects = getAllProjects();
 
-// Sorting rules:
-// 1. Non-systems first
-// 2. Systems last
-// 3. Inside each group: sort by date (newest → oldest)
-const projects = all.sort((a, b) => {
-  const aIsSystem = a.type === "system";
-  const bIsSystem = b.type === "system";
+// Your desired manual order
+const ORDER: string[] = [
+  "Warriors Merge",
+  "Ice Slingers",
+  "Orbit Defense!",
+  "Castle Force TD",
+  "Peg Slinger",
+  "Super Strike!",
+  "Chaos Squad",
+  "Slime Hunt",
+  "Survive the Void",
+  "Mr.Gish",
+  "Devoured",
+  "A Way Back",
+  "Iris",
+  "Vertical Slice",
+  "Bound Survivors",
+];
 
-  // SYSTEMS GO LAST
-  if (aIsSystem && !bIsSystem) return 1;
-  if (!aIsSystem && bIsSystem) return -1;
+// Sorting logic to follow your list exactly
+const projectsOrdered = [...allProjects].sort((a, b) => {
+  const ia = ORDER.indexOf(a.title);
+  const ib = ORDER.indexOf(b.title);
 
-  // Within each group: newest first
-  return new Date(b.date) - new Date(a.date);
+  const aIn = ia !== -1;
+  const bIn = ib !== -1;
+
+  // If BOTH are in the list → compare indices
+  if (aIn && bIn) return ia - ib;
+
+  // If only A is in the list → A comes first
+  if (aIn && !bIn) return -1;
+
+  // If only B is in the list → B comes first
+  if (!aIn && bIn) return 1;
+
+  // If neither is in the list → fallback alphabetical
+  return a.title.localeCompare(b.title);
 });
 ---
 
-<Base title="Projects — Dor Shem Tov">
-  <section class="mt-4 mb-10 max-w-3xl">
-    <h1 class="text-3xl font-bold mb-3">All Projects</h1>
-    <p class="text-neutral-300 leading-relaxed">
-    </p>
+<Base title="All Projects — Dor Shem Tov">
+
+  <section class="space-y-6">
+    <header class="space-y-2">
+      <h1 class="text-3xl sm:text-4xl font-bold">All Projects</h1>
+      <p class="text-sm sm:text-base text-neutral-300 max-w-2xl">
+        A collection of prototypes, production games, and design experiments.  
+        Ordered manually to highlight key projects first.
+      </p>
+    </header>
+
+    {projectsOrdered.length === 0 ? (
+      <p class="text-sm text-neutral-400">
+        No projects found. Add Markdown files in <code>src/content/projects</code>.
+      </p>
+    ) : (
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+        {projectsOrdered.map((p) => (
+          <a class="card block" href={`/projects/${p.slug}/`}>
+            <img
+              src={p.cover ?? "/images/hero-placeholder.svg"}
+              alt={p.title}
+              class="rounded-xl mb-3 w-full h-44 object-cover"
+              loading="lazy"
+            />
+            <h2 class="text-lg font-semibold">{p.title}</h2>
+            <p class="text-sm opacity-80">{p.summary}</p>
+
+            {p.tags && p.tags.length > 0 && (
+              <div class="mt-3 flex flex-wrap gap-2">
+                {p.tags.map((t) => (
+                  <span class="tag">{t}</span>
+                ))}
+              </div>
+            )}
+          </a>
+        ))}
+      </div>
+    )}
   </section>
 
-  <section>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {projects.map(p => (
-        <a class="card block" href={`/projects/${p.slug}/`}>
-          <img
-            src={p.cover}
-            alt={p.title}
-            class="rounded-xl mb-3 w-full h-44 object-cover"
-            loading="lazy"
-          />
-
-          <h3 class="text-lg font-semibold">{p.title}</h3>
-          <p class="text-sm opacity-80 mb-2">{p.summary}</p>
-
-          <div class="flex flex-wrap gap-2">
-            {p.tags?.map(t => <span class="tag">{t}</span>)}
-          </div>
-        </a>
-      ))}
-    </div>
-  </section>
 </Base>
