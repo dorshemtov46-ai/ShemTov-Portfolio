@@ -1,4 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
-  <rect width="64" height="64" rx="12" fill="#F2C94C"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="28" font-family="Arial" fill="#111">EZ</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Yellow rounded square background -->
+  <rect x="4" y="4" width="56" height="56" rx="12" fill="#FACC15" />
+
+  <!-- DST text -->
+  <text
+    x="50%"
+    y="50%"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="22"
+    font-weight="700"
+    fill="#111827"
+  >
+    DST
+  </text>
 </svg>
