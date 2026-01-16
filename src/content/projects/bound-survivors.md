@@ -1,41 +1,31 @@
 ---
 title: "Bound Survivors"
 slug: "bound-survivors"
-summary: "A co‑op survivor title built around synergy, spacing, and rapid upgrade cycles."
+featured: false
+
+date: "2024-01-01"
+
+summary: "A co-op survival arena game created during a global game jam, where players are linked together and must coordinate movement, attacks, and positioning."
+
 role: "Game Designer"
+tech: "Unity, C#, PC, Co-op"
+
+cover: "/images/bound-survivors-cover.png"
+
 tags:
   - Game Design
-  - Mobile
-cover: "/images/placeholders/hero-placeholder.svg"
+  - PC
+
 links:
-  video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  steam: ""
+  itch: ""
+  video: ""
+  download: ""
+
 gallery:
-  - "/images/placeholders/bound-survivors.svg"
+  - "/images/bound-survivors-cover.png"
 ---
 
-Bound Survivors is a prototype described in Dor Shem Tov’s portfolio, focusing on co-op survivor-style combat with an emphasis on synergy, spacing, and team timing.
-
-## My Role
-
-- Designed the **core gameplay loop** and overall player experience  
-- Defined the main win/fail conditions and the feedback around them  
-- Adjusted balance and pacing based on internal playtests  
-- Documented the design so it could be iterated on quickly
-
-## Highlights
-
-- Clear, readable structure that makes the main mechanic easy to grasp  
-- Tight focus on a single strong idea instead of many half-finished systems  
-- Built to support rapid iteration and experimentation
-
-## Challenges & Solutions
-
-- **Scoping the experience**  
-  The design intentionally stayed small so the main idea could be polished instead of drowned in extra features.
-
-- **Communicating feedback**  
-  Visual and timing cues were added or simplified until players could quickly understand what worked and what didn’t.
-
-## Tech Stack
-
-- Unity and common modern game-design workflows (paper design, greybox, iteration)  
+Bound Survivors challenges two players to stay alive while physically tethered, forcing cooperation in movement
+and timing. Designed during a jam, the project focuses on synergy mechanics, enemy wave escalation, and shared
+resource management under pressure.
