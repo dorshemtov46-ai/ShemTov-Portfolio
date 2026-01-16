@@ -26,18 +26,19 @@ const featuredProjects = allProjects.slice(0, 6);
         captivates players and drives success.
       </p>
 
-      <div class="flex flex-wrap gap-3 mt-4">
-        <a class="btn" href="/projects">View Projects</a>
-        <a class="btn-secondary" href="/resume">View Resume</a>
+      {/* BUTTONS: both yellow + aligned + no "View" */}
+      <div class="flex flex-wrap items-center gap-3 mt-4">
+        <a class="btn" href="/projects">Projects</a>
+        <a class="btn" href="/resume">Resume</a>
       </div>
     </div>
 
-    {/* PROFILE IMAGE — SIZE LIMITED */}
-    <div class="card p-0 overflow-hidden max-h-[360px] lg:max-h-[420px]">
+    {/* PROFILE IMAGE — smaller + full image (no crop) */}
+    <div class="card p-0 overflow-hidden max-h-[360px] lg:max-h-[420px] bg-black/20 flex items-center justify-center">
       <img
         src="/images/dst-profile.jpg"
         alt="Dor Shem Tov profile photo"
-        class="w-full h-full object-cover rounded-xl"
+        class="w-full h-full object-contain rounded-xl"
         loading="lazy"
       />
     </div>
