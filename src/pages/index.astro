@@ -33,12 +33,12 @@ const featuredProjects = allProjects.slice(0, 6);
       </div>
     </div>
 
-    {/* PROFILE IMAGE — smaller + full image (no crop) */}
-    <div class="card p-0 overflow-hidden max-h-[360px] lg:max-h-[420px] bg-black/20 flex items-center justify-center">
+    {/* PROFILE IMAGE — FULL IMAGE (NO CROP), SIMILAR TO BEFORE */}
+    <div class="card p-0 overflow-hidden bg-black/20 flex items-center justify-center">
       <img
         src="/images/dst-profile.jpg"
         alt="Dor Shem Tov profile photo"
-        class="w-full h-full object-contain rounded-xl"
+        class="w-full max-h-[360px] lg:max-h-[420px] object-contain rounded-xl"
         loading="lazy"
       />
     </div>
