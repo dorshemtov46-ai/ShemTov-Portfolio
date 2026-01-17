@@ -5,7 +5,7 @@ featured: true
 
 date: "2024-01-01"
 
-summary: "A system-driven mobile battler focusing on inventory decision-making and base-to-base clashes."
+summary: "A mobile bag-management game combining strategic inventory decisions with base-vs-base auto battles."
 
 role: "Game Designer · Level Designer"
 tech: "Unity, C#, Mobile"
@@ -15,6 +15,7 @@ cover: "/images/warriors-merge-cover.png"
 tags:
   - Level Designer
   - Game Design
+  - Project Management
   - Mobile
 
 links:
@@ -27,6 +28,5 @@ gallery:
   - "/images/warriors-merge-cover.png"
 ---
 
-Warriors Merge is a system-driven mobile battler where players manage inventory,
-merge units, and push lanes in base-to-base clashes. I focused on encounter
-design, level pacing, and creating clear decision points for the player.
+Warriors Merge focuses on decision-making through limited inventory space, forcing players
+to prioritize units, upgrades, and timing before automated base-vs-base combat unfolds.
