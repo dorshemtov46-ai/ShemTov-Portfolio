@@ -2,20 +2,18 @@
 title: "Slime Hunt"
 slug: "slime-hunt"
 featured: true
-
 date: "2024-01-01"
 
-summary: "A lighthearted creature-catching adventure where players track, trap, and capture slimes across dynamic environments."
+summary: "A simplified turn-based strategy game where players defeat cute slimes using magical abilities and tactical choices."
 
-role: "Game Designer · Level Designer"
-tech: "Unity, C#, Mobile, Creature Collection"
+role: "Game Designer"
+tech: "Unity, C#"
 
 cover: "/images/slime-hunt-cover.png"
 
 tags:
-  - Level Designer
   - Game Design
-  - Mobile
+  - Project Management
 
 links:
   appstore: ""
@@ -27,6 +25,5 @@ gallery:
   - "/images/slime-hunt-cover.png"
 ---
 
-Slime Hunt blends exploration with puzzle-driven encounters as players search for rare slimes,
-set traps, and master unique behaviors. I contributed to biome layout, collectible pacing,
-and encounter scripting that keeps each hunt engaging and surprising.
+Slime Hunt is a lighthearted turn-based strategy experience focused on clear decision-making and readability.
+Players take on the role of a magician, choosing spells and actions to efficiently defeat waves of charming but dangerous slimes.
