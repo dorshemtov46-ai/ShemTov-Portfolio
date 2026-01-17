@@ -1,29 +1,18 @@
 ---
 title: "Bound Survivors"
 slug: "bound-survivors"
-featured: true
-date: "2024-01-01"
-
-summary: "A cooperative survivor game where players are physically tied together, created during Global Game Jam 2024."
-
-role: "Game Designer"
-tech: "Unity, C#"
-
-cover: "/images/bound-survivors-cover.png"
-
+featured: false
 tags:
   - Game Design
-
+role: "Game Designer"
+tech: "Unity"
+summary: "A cooperative survivor game where players are physically tied together, created during Global Game Jam 2024."
+cover: "/images/bound-survivors-cover.png"
 links:
-  appstore: ""
-  playstore: ""
-  video: ""
-  download: ""
-
-gallery:
-  - "/images/bound-survivors-cover.png"
+  download: "https://drive.google.com/file/d/1leoJu6T9rNZsDtFXQeMzGXLI3EI_zRLm/view?usp=sharing"
 ---
 
-Bound Survivors is a cooperative survival experience built around a shared constraint.
-Players must coordinate movement, positioning, and decision-making while physically connected,
-turning cooperation itself into the game’s central challenge.
+Bound Survivors A cooperative survivor game where players are physically tied together, created during Global Game Jam 2024.
+
+## My Role
+Participated in the 2024 Global Game Jam creating Bound Survivors, which is a funny co-op game where players are tied together and effected by each others movement
