@@ -10,7 +10,7 @@ tags:
 role: "Game Designer • Project Manager"
 tech: "Unity • iOS • Rapid KPI Prototype"
 summary: "A bag-management game combining strategic inventory decisions with base-vs-base auto battles."
-cover: "/images/placeholders/warriors-merge.png"
+cover: "/images/warriors-merge-cover.png"
 links:
   appstore: "https://apps.apple.com/il/app/warriors-merge/id6502769529"
   playstore: ""
