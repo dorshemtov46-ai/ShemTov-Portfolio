@@ -12,7 +12,7 @@ tech: "Unity • iOS"
 summary: "A fast-paced bag-management game built around strategic inventory decisions and base-vs-base auto battles."
 cover: "/images/warriors-merge-cover.png"
 links:
-  appstore: "https://apps.apple.com/il/app/warriors-merge/id6502769529"
+  appstore Link: "https://apps.apple.com/il/app/warriors-merge/id6502769529"
 gallery:
   - "/images/projects/warriors-merge/01.png"
   - "/images/projects/warriors-merge/02.png"
