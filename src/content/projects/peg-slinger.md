@@ -1,29 +1,34 @@
 ---
-title: "Pegslinger"
-slug: "peg-slinger"
-featured: true
-date: "2024-01-01"
-
-summary: "A pachinko-inspired combat game where players use color-based shots to attack different areas as a cowboy in the American West."
-
-role: "Game Designer"
-tech: "Unity, C#"
-
-cover: "/images/pegslinger-cover.png"
-
+title: "PegSlinger"
+slug: "pegslinger"
+featured: false
 tags:
+  - Level Design
   - Game Design
   - Project Management
-
+role: "Game Designer • Project Manager"
+tech: "Unity • iOS"
+summary: "A pachinko-inspired combat game where players use color-based shots to attack different areas as a cowboy in the American West."
+cover: "/images/pegslinger-cover.png"
 links:
-  appstore: ""
-  playstore: ""
-  video: ""
-  download: ""
-
+  appstore: "https://apps.apple.com/ph/app/pegslinger/id6737227238"
 gallery:
-  - "/images/pegslinger-cover.png"
+  - "/images/projects/pegslinger/01.png"
+  - "/images/projects/pegslinger/02.png"
+  - "/images/projects/pegslinger/03.png"
+  - "/images/projects/pegslinger/04.png"
 ---
 
-Pegslinger blends pachinko-style randomness with deliberate color-based decision-making,
-placing players in the role of a cowboy using precision shots to control combat outcomes across varied encounters.
+App Store Link: https://apps.apple.com/ph/app/pegslinger/id6737227238
+
+Pegslinger A pachinko-inspired combat game where players use color-based shots to attack different areas as a cowboy in the American West.
+Created using a data-driven agile approach in collaboration with Voodoo, the game contains over 20 unique levels, meaningful meta content and a focus on a positive and balanced user experience.
+
+## My Role
+Lead the team as Game Designer & Project Manager, owning the game’s development from ideation up to a shipped App Store product.
+
+* Core mechanics & game loop
+* Level design - 20+ Unique levels and user experiences
+* Economy & balance
+* Data-driven design approach focusing on D1 and D7 retention
+* Day-to-day planning and delivery management with the team
