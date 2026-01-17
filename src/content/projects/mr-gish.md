@@ -1,21 +1,19 @@
 ---
-title: "Mr.Gish"
+title: "Mr. Gish"
 slug: "mr-gish"
 featured: true
-
 date: "2024-01-01"
 
-summary: "A casual color-matching puzzle game where players pop bubbles, chain combos, and rescue the cheerful monster Mr.Gish."
+summary: "A non-profit bubble shooter designed to help diagnose social anxiety among elementary school students through play."
 
-role: "Game Designer · Level Designer"
-tech: "Unity, C#, Mobile, Puzzle"
+role: "Game Designer"
+tech: "Unity, C#"
 
 cover: "/images/mr-gish-cover.png"
 
 tags:
-  - Level Designer
+  - Level Design
   - Game Design
-  - Mobile
 
 links:
   appstore: ""
@@ -27,6 +25,6 @@ gallery:
   - "/images/mr-gish-cover.png"
 ---
 
-Mr.Gish focuses on fast-paced bubble popping and combo chaining, wrapped in a playful creature theme.
-I designed puzzle layouts, difficulty curves, and progression flow to ensure a friendly yet engaging
-experience for casual players.
+Mr. Gish is a non-profit game project developed with a serious purpose in mind.
+Using familiar bubble-shooter mechanics, the game subtly gathers behavioral signals
+to support the identification of social anxiety in elementary school students.
