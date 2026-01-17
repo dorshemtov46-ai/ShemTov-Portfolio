@@ -2,24 +2,22 @@
 title: "A Way Back"
 slug: "a-way-back"
 featured: true
-
 date: "2024-01-01"
 
-summary: "A metroidvania adventure emphasizing platform puzzles and backtracking mastery."
+summary: "A 2.5D metroidvania where players steal enemy abilities and use them as their own to progress through interconnected environments."
 
-role: "Game Designer · Level Designer"
-tech: "Unity, C#, PC, Metroidvania"
+role: "Level Designer"
+tech: "Unity, C#"
 
 cover: "/images/a-way-back-cover.png"
 
 tags:
-  - Level Designer
-  - Game Design
-  - PC
+  - Level Design
+  - Project Management
 
 links:
-  steam: ""
-  itch: ""
+  appstore: ""
+  playstore: ""
   video: ""
   download: ""
 
@@ -27,6 +25,6 @@ gallery:
   - "/images/a-way-back-cover.png"
 ---
 
-A Way Back challenges players to navigate interlinked caverns filled with traversal puzzles, shortcuts,
-and unlockable abilities. I contributed to layout flow, puzzle readability, ability gating, and
-exploration incentives that reward curiosity and backtracking mastery.
+A Way Back is a 2.5D metroidvania focused on exploration and ability-driven progression.
+By stealing abilities from defeated enemies, players unlock new movement options and combat strategies,
+encouraging backtracking and discovery across a connected world.
