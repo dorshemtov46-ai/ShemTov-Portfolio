@@ -2,20 +2,18 @@
 title: "Survive the Void"
 slug: "survive-the-void"
 featured: true
-
 date: "2024-01-01"
 
-summary: "A cosmic action-survivor where players battle through alien swarms while warping between dimensional rifts."
+summary: "An isometric survival game developed during the second year of college as part of an accelerator program, focusing on progression and long-term survival."
 
-role: "Game Designer · Level Designer"
-tech: "Unity, C#, Mobile, Action Survivor"
+role: "Game Designer"
+tech: "Unity, C#"
 
 cover: "/images/survive-the-void-cover.png"
 
 tags:
-  - Level Designer
   - Game Design
-  - Mobile
+  - Project Management
 
 links:
   appstore: ""
@@ -27,7 +25,6 @@ gallery:
   - "/images/survive-the-void-cover.png"
 ---
 
-Survive the Void blends cosmic fantasy with relentless action-survivor gameplay. Players
-navigate dimensional rifts, upgrade abilities, and overcome escalating alien hordes.
-I contributed to encounter pacing, area progression, enemy patterns, and readability-focused
-FX direction during high-intensity moments.
+Survive the Void is an isometric survival project created during the second year of college
+as part of an accelerator program. The game emphasizes player progression, resource management,
+and surviving increasingly hostile environments over time.
