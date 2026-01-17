@@ -9,7 +9,7 @@ summary: "A pachinko-inspired combat game where players use color-based shots to
 role: "Game Designer"
 tech: "Unity, C#"
 
-cover: "/images/peg-slinger-cover.png"
+cover: "/images/pegslinger-cover.png"
 
 tags:
   - Game Design
@@ -22,7 +22,7 @@ links:
   download: ""
 
 gallery:
-  - "/images/peg-slinger-cover.png"
+  - "/images/pegslinger-cover.png"
 ---
 
 Pegslinger blends pachinko-style randomness with deliberate color-based decision-making,
