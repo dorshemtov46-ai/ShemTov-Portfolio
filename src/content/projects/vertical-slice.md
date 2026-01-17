@@ -1,24 +1,22 @@
 ---
 title: "Vertical Slice"
 slug: "vertical-slice"
-featured: false
-
+featured: true
 date: "2024-01-01"
 
-summary: "A surreal first-person puzzle experience created for a 48-hour game jam, exploring looping spaces and recursive environments."
+summary: "A short and humorous game about game development, created during Global Game Jam 2023."
 
 role: "Game Designer"
-tech: "Unity, C#, PC, Puzzle"
+tech: "Unity, C#"
 
 cover: "/images/vertical-slice-cover.png"
 
 tags:
   - Game Design
-  - PC
 
 links:
-  steam: ""
-  itch: ""
+  appstore: ""
+  playstore: ""
   video: ""
   download: ""
 
@@ -26,6 +24,5 @@ gallery:
   - "/images/vertical-slice-cover.png"
 ---
 
-Vertical Slice plays with optical illusions, recursion, and environmental tricks to create a surreal puzzle
-experience. Built during a time-limited jam, the project focuses on atmosphere, mood storytelling, and unusual
-space manipulation to challenge player expectations and perception.
+Vertical Slice is a playful take on the game development process, created under the tight constraints of Global Game Jam 2023.
+The project focuses on humor, rapid iteration, and communicating ideas clearly within a very short playtime.
