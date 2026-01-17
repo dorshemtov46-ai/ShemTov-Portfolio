@@ -19,6 +19,6 @@ Devoured A 2.5D survival game with a creepy-yet-cute cartoon art style, where it
 
 ## My Role
 Led the team inside an incubator program as a part of Clover Bite studio. During a period of 7 months developing the game, Pitching to investors and publishers.
-Collaborated on designing and documenting game mechanics to ensure they were implemented smoothly.
-Demonstrated proficiency in creating distinct and innovative level designs that elevate the overall gaming experience.
-Utilized game design methodologies to seamlessly blend gameplay, narrative, and features, resulting in heightened player engagement.
+* Collaborated on designing and documenting game mechanics to ensure they were implemented smoothly.
+* Demonstrated proficiency in creating distinct and innovative level designs that elevate the overall gaming experience.
+* Utilized game design methodologies to seamlessly blend gameplay, narrative, and features, resulting in heightened player engagement.
