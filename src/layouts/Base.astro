@@ -1,29 +1,82 @@
 ---
-const { title = "Dor Shem Tov's Portfolio" } = Astro.props;
+import "../styles/global.css";
+
+const {
+  title = "Dor Shem Tov's Portfolio",
+  // If no description is provided, we simply don't output a meta description.
+  // This prevents WhatsApp from showing the extra preview line.
+  description = "",
+} = Astro.props;
 ---
 
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    {description && <meta name="description" content={description} />}
+
+    <!-- Tab Title -->
     <title>{title}</title>
 
-    <!-- Open Graph / WhatsApp / LinkedIn -->
+    <!-- Application naming for Chrome/Edge/PWA -->
+    <meta name="application-name" content="Dor Shem Tov Portfolio" />
+
+    <!-- Social Metadata -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://shem-tov-protfolio.vercel.app/" />
-    <meta property="og:title" content="Dor Shem Tov's Portfolio" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:site_name" content="Dor Shem Tov Portfolio" />
+    <meta property="og:title" content={title} />
+    <meta property="twitter:title" content={title} />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.svg" />
 
-    <!-- Fonts / styles (keep whatever you already had) -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
-  <body class="bg-black text-white">
-    <slot />
+  <body class="min-h-screen bg-neutral-950 text-neutral-100">
+    <header class="border-b border-white/5 bg-black/30 backdrop-blur">
+      <nav class="container flex h-16 items-center justify-between">
+        <!-- LOGO / TOP LEFT -->
+        <a href="/" class="flex items-center gap-2">
+          <div class="h-8 w-8 rounded-xl bg-accent/90 flex items-center justify-center text-xs font-extrabold text-black">
+            DST
+          </div>
+          <span class="font-semibold tracking-tight text-sm sm:text-base">
+            Dor Shem Tov
+          </span>
+        </a>
+
+        <!-- NAV LINKS -->
+        <div class="flex items-center gap-4 text-xs sm:text-sm">
+          <a class="nav-link" href="/projects">Projects</a>
+          <a class="nav-link" href="/resume">Resume</a>
+          <a class="btn btn-sm" href="/contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container py-10">
+      <slot />
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/5 py-8 text-xs text-neutral-400">
+      <div class="container flex flex-wrap items-center justify-between gap-3">
+        <span>© {new Date().getFullYear()} Dor Shem Tov</span>
+        <span class="flex gap-3">
+          <a class="hover:text-accent" href="mailto:dorsemtov@gmail.com">Email</a>
+          <a class="hover:text-accent" href="https://www.linkedin.com/in/dorshemtov" target="_blank">LinkedIn</a>
+        </span>
+      </div>
+    </footer>
   </body>
 </html>
