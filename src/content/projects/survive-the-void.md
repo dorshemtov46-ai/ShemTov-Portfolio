@@ -6,7 +6,7 @@ tags:
   - Game Design
   - Project Management
 role: "Game Designer • Project Manager"
-tech: "Unity • C#"
+tech: "Unity"
 summary: "An isometric survival game developed during the second year of college as part of an accelerator program, focusing on progression and long-term survival."
 cover: "/images/survive-the-void-cover.png"
 links:
