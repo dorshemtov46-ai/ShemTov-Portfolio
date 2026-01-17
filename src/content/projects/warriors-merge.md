@@ -13,7 +13,7 @@ tech: "Unity, C#, Mobile"
 cover: "/images/warriors-merge-cover.png"
 
 tags:
-  - Level Designer
+  - Level Design
   - Game Design
   - Project Management
   - Mobile
