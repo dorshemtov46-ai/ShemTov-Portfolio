@@ -2,20 +2,18 @@
 title: "Super Strike!"
 slug: "super-strike"
 featured: true
-
 date: "2024-01-01"
 
-summary: "An over-the-top arcade brawler where timing charged attacks and combos turns each encounter into a flashy power fantasy."
+summary: "An auto-battle puzzle RPG where players combine abilities and synergies to overcome enemies as a superhero."
 
-role: "Game Designer · Level Designer"
-tech: "Unity, C#, Mobile, Action"
+role: "Game Designer"
+tech: "Unity, C#"
 
 cover: "/images/super-strike-cover.png"
 
 tags:
-  - Level Designer
   - Game Design
-  - Mobile
+  - Project Management
 
 links:
   appstore: ""
@@ -27,6 +25,5 @@ gallery:
   - "/images/super-strike-cover.png"
 ---
 
-Super Strike! is a punchy arcade action game focused on explosive special moves and readable telegraphs.
-I worked on combat flow, enemy patterns, and level scenarios that encourage players to experiment
-with timing, spacing, and power management.
+Super Strike! combines puzzle-like decision-making with automated combat,
+challenging players to create powerful combos and strategic synergies while progressing through increasingly difficult encounters as a superhero.
