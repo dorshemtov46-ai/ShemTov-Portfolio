@@ -63,6 +63,7 @@ const extraVideos = videos.slice(1);
 
 const { Content } = project;
 ---
+
 <Base title={`${project.title} — Dor Shem Tov`} description={project.summary}>
   <a href="/projects" class="text-xs text-neutral-300 hover:text-accent underline">
     ← Back to projects
@@ -90,7 +91,7 @@ const { Content } = project;
         )}
       </div>
 
-      <!-- Extra videos (e.g. Manos gameplay) -->
+      <!-- Extra videos -->
       {extraVideos.length > 0 && (
         <div class="grid gap-4 md:grid-cols-2">
           {extraVideos.map((v) => (
@@ -174,12 +175,8 @@ const { Content } = project;
           </a>
         )}
         {links.video && !links.trailer && !links.gameplay && (
-          <a
-            class="btn btn-sm bg-white/5 text-neutral-100 hover:bg-white/10"
-            href={links.video}
-            target="_blank"
-          >
-            Open on YouTube
+          <a class="btn btn-sm" href={links.video} target="_blank">
+            YouTube Link
           </a>
         )}
       </div>
@@ -250,18 +247,4 @@ const { Content } = project;
       });
     }
   </script>
-
-
-
-{project.links?.video && (
-  <div class="mt-10 aspect-video rounded-xl overflow-hidden border border-white/10">
-    <iframe
-      src={project.links.video}
-      class="w-full h-full"
-      loading="lazy"
-      allowfullscreen
-    />
-  </div>
-)}
-
 </Base>
