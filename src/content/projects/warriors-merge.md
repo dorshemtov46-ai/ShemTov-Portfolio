@@ -20,7 +20,7 @@ gallery:
   - "/images/projects/warriors-merge/04.png"
 ---
 
-App Store: https://apps.apple.com/il/app/warriors-merge/id6502769529
+App Store Link: https://apps.apple.com/il/app/warriors-merge/id6502769529
 
 Warriors Merge is a fast-paced bag-management game built around strategic inventory decisions and base-vs-base auto battles.  
 Created using a data-driven agile approach in collaboration with Voodoo, the game contains over 40 unique levels, meaningful meta content and a focus on a positive and balanced user experience.
