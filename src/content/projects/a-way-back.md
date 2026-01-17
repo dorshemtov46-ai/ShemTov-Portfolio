@@ -2,29 +2,21 @@
 title: "A Way Back"
 slug: "a-way-back"
 featured: true
-date: "2024-01-01"
-
-summary: "A 2.5D metroidvania where players steal enemy abilities and use them to progress through interconnected environments."
-
-role: "Level Designer"
-tech: "Unity, C#"
-
-cover: "/images/a-way-back-cover.png"
-
 tags:
   - Level Design
   - Project Management
-
+role: "Game Designer • Project Manager"
+tech: "Unity"
+summary: "A 2.5D metroidvania where players steal enemy abilities and use them to progress through interconnected environments."
+cover: "/images/a-way-back-cover.png"
 links:
-  appstore: ""
-  playstore: ""
-  video: ""
-  download: ""
-
-gallery:
-  - "/images/a-way-back-cover.png"
+  video: "https://www.youtube.com/watch?v=7Xla-dnN1JA"
+  download: "https://drive.google.com/file/d/1JprHvOnW5_1MKr4WnoX-K2kg62KYdXHe/view?usp=drive_link"
 ---
 
-A Way Back is a 2.5D metroidvania focused on exploration and ability-driven progression.
-By stealing abilities from defeated enemies, players unlock new movement options and combat strategies,
-encouraging backtracking and discovery across a connected world.
+A Way Back A 2.5D metroidvania where players steal enemy abilities and use them to progress through interconnected environments.
+
+## My Role
+Led the team to develop our final project as students. Making sure we keep reaching deadlines increasing productivity through communications, research, and critical thinking.
+* Researched level design for the project learning from top Metroidvania games.
+* Solved conflicts among the team to ensure meeting deadlines.
