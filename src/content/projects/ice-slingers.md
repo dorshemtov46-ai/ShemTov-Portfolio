@@ -1,29 +1,34 @@
 ---
 title: "Ice Slingers"
+date: 2024-10-01
 slug: "ice-slingers"
 featured: true
-date: "2024-01-01"
-
-summary: "A PvPvE slingshot-mechanic game where players compete by gathering points and disrupting each other."
-
-role: "Game Designer"
-tech: "Unity, C#"
-
-cover: "/images/ice-slingers-cover.png"
-
 tags:
   - Game Design
   - Project Management
-
+role: "Game Designer • Project Manager"
+tech: "Unity • iOS"
+summary: "A PvPvE slingshot-mechanic game where players compete by gathering points and disrupting each other."
+cover: "/images/ice-slingers-cover.png"
 links:
-  appstore: ""
-  playstore: ""
-  video: ""
-  download: ""
-
+  appstore: "https://apps.apple.com/by/app/ice-slingers/id6741430519"
 gallery:
-  - "/images/ice-slingers-cover.png"
+  - "/images/projects/ice-slingers/01.png"
+  - "/images/projects/ice-slingers/02.png"
+  - "/images/projects/ice-slingers/03.png"
+  - "/images/projects/ice-slingers/04.png"
 ---
 
-Ice Slingers is a competitive PvPvE experience built around a physics-driven slingshot mechanic,
-encouraging players to balance precision, timing, and interference against both opponents and the environment.
+App Store Link: https://apps.apple.com/by/app/ice-slingers/id6741430519
+
+Ice Slingers A PvPvE slingshot-mechanic game where players compete by gathering points and disrupting each other.  
+Created using a data-driven agile approach in collaboration with Voodoo, the game contains over 20 unique levels, meaningful meta content and a focus on a positive and balanced user experience.
+
+## My Role
+Lead the team as Game Designer & Project Manager, owning the game’s development from ideation up to a shipped App Store product.
+
+* Core mechanics & game loop
+* Level design - 20+ Unique levels and user experiences
+* Economy & balance
+* Data-driven agile approach focusing on D1 and D7 retention
+* Day-to-day planning and delivery management with the team
