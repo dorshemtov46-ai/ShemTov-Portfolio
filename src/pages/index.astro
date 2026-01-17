@@ -2,13 +2,9 @@
 import Base from "../layouts/Base.astro";
 import { getAllProjects } from "../lib/projects";
 
-// Load all projects
 const allProjects = getAllProjects();
 
-/**
- * Manual "featured" selection (ordered)
- * This overrides the old: allProjects.slice(0, 6)
- */
+/* Manual featured selection (ordered) */
 const FEATURED_SLUGS = [
   "warriors-merge",
   "orbit-defense",
@@ -22,35 +18,39 @@ const featuredProjects = FEATURED_SLUGS
   .filter(Boolean);
 ---
 
-<Base title="Dor Shem Tov — Game Designer & Unity Developer">
+<Base title="Dor Shem Tov — Game Designer & Product Manager">
   {/* HERO SECTION */}
   <section class="grid gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] items-center">
     <div class="space-y-4">
-      <p class="text-sm font-mono text-accent">Game Design · Systems · Prototyping</p>
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-        Dor Shem Tov  
-        <span class="block text-lg sm:text-xl font-normal text-neutral-300 mt-2">
-          Game Designer & Unity Developer focused on clear systems, tight scopes, and playable prototypes.
-        </span>
+        Dor Shem Tov
       </h1>
 
-      <p class="text-sm sm:text-base text-neutral-300 max-w-xl">
-        I design and build games and prototypes with a strong focus on core loops, clarity for first-time players,
-        and iteration-friendly structures. Below are some of the projects I’ve worked on across mobile, PC,
-        and jam environments.
+      {/* YELLOW ROLE LINE */}
+      <p class="text-base sm:text-lg font-medium text-accent">
+        Level Designer • Game Designer • Product Manager
       </p>
 
-      <div class="flex flex-wrap gap-3 mt-4">
-        <a class="btn" href="/projects">View Projects</a>
-        <a class="btn-secondary" href="/resume">View Resume</a>
+      <p class="text-sm sm:text-base text-neutral-300 max-w-xl">
+        Creative and innovative game designer with a passion for crafting immersive gaming experiences.
+        Skilled in concept development, level design, and designing gameplay mechanics. Proficient in
+        industry-standard software and techniques. Committed to delivering engaging gameplay that
+        captivates players and drives success.
+      </p>
+
+      {/* BUTTONS: both yellow + aligned + no "View" */}
+      <div class="flex flex-wrap items-center gap-3 mt-4">
+        <a class="btn" href="/projects">Projects</a>
+        <a class="btn" href="/resume">Resume</a>
       </div>
     </div>
 
-    <div class="card p-0 overflow-hidden">
+    {/* PROFILE IMAGE — FULL IMAGE (NO CROP), SIMILAR TO BEFORE */}
+    <div class="card p-0 overflow-hidden bg-black/20 flex items-center justify-center">
       <img
-        src="/images/hero-placeholder.svg"
-        alt="Dor Shem Tov portfolio hero placeholder"
-        class="w-full h-full object-cover rounded-xl"
+        src="/images/dst-profile.jpg"
+        alt="Dor Shem Tov profile photo"
+        class="w-full max-h-[360px] lg:max-h-[420px] object-contain rounded-xl"
         loading="lazy"
       />
     </div>
@@ -67,7 +67,7 @@ const featuredProjects = FEATURED_SLUGS
 
     {featuredProjects.length === 0 ? (
       <p class="text-sm text-neutral-400">
-        No projects found yet. Make sure your <code>src/content/projects</code> files are in place.
+        No projects found yet.
       </p>
     ) : (
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
