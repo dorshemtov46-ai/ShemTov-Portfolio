@@ -2,20 +2,19 @@
 title: "Chaos Squad"
 slug: "chaos-squad"
 featured: true
-
 date: "2024-01-01"
 
-summary: "A survivor-like enemy onslaught game with procedural upgrade paths and escalating chaos."
+summary: "A survivor-like action game where players control a party of heroes, upgrading each member individually to survive escalating waves of enemies."
 
-role: "Game Designer · Level Designer"
-tech: "Unity, C#, Mobile, Survivor-like"
+role: "Game Designer"
+tech: "Unity, C#"
 
 cover: "/images/chaos-squad-cover.png"
 
 tags:
-  - Level Designer
+  - Level Design
   - Game Design
-  - Mobile
+  - Project Management
 
 links:
   appstore: ""
@@ -27,6 +26,5 @@ gallery:
   - "/images/chaos-squad-cover.png"
 ---
 
-Chaos Squad throws players into dense enemy swarms, forcing them to kite, position, and choose upgrades
-that define their build. I worked on enemy compositions, arena layouts, and pacing of the meta-progression
-so each run feels tense and increasingly powerful.
+Chaos Squad is a party-based survivor-like experience focused on managing multiple heroes simultaneously.
+Players must make moment-to-moment decisions about positioning, upgrades, and synergies as enemy pressure steadily increases.
