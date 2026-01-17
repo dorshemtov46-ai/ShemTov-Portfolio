@@ -18,5 +18,5 @@ Created as part of an Acceleration program where the game was Pitched to several
 
 ## My Role
 Lead the team as Game Designer & Project Manager, owning the game’s development Pitching to investors and publishers.
-Presenting the game with clarity to the team and potential investors
-Day-to-day planning and delivery management with the team
+* Presenting the game with clarity to the team and potential investors
+* Day-to-day planning and delivery management with the team
