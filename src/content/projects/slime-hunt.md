@@ -24,7 +24,7 @@ Slime Hunt A simplified turn-based strategy game where players defeat cute slime
 Created using a data-driven agile approach in collaboration with Voodoo, the game contains over 20 unique levels, meaningful meta content and a focus on a positive and balanced user experience.
 
 ## My Role
-Lead the team as Game Designer & Project Manager, owning the game’s development from ideation up to a shipped App Store product.
+Led the team as Game Designer & Project Manager, owning the game’s development from ideation up to a shipped App Store product.
 
 * Core mechanics & game loop
 * Level design - 20+ Unique levels and user experiences
