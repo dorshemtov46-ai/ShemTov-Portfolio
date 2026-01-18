@@ -25,7 +25,7 @@ Orbit Defense is a base-defense game where players pilot a spaceship to protect 
 Created using a data-driven agile approach in collaboration with Voodoo, the game contains over 20 unique levels, meaningful meta content and a focus on a positive and balanced user experience.
 
 ## My Role
-Led the team as Game Designer & Project Manager, owning the game’s development from ideation up to a shipped App Store product.
+I wore two hats as Game Designer and Project Manager, leading the team through every step of the process from the first spark of an idea to a successful App Store launch.
 
 * Core mechanics & game loop
 * Level design - 20+ Unique levels and user experiences
